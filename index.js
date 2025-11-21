@@ -17,7 +17,7 @@ const argv = await yargs(process.argv.slice(2))
   .alias('h', 'help')
   .parse()
 
-const appPath = process.platform === 'win32' ? path.join(process.env.LOCALAPPDATA || '', 'Programs', 'httptoolkit') : path.join('/opt', 'httptoolkit')
+const appPath = process.platform === 'win32' ? path.join(process.env.LOCALAPPDATA || '', 'Programs', 'HTTP Toolkit') : path.join('/opt', 'httptoolkit')
 const serverPath = (() => {
   let svPath = process.platform === 'win32' ? path.join(process.env.LOCALAPPDATA || '', 'httptoolkit-server', 'client') : path.join('/opt', 'httptoolkit-server', 'client')
   if (fs.existsSync(svPath)) {
